@@ -1,0 +1,16 @@
+# Binaries
+**/bin/
+
+
+# Misc files
+*.log
+*.obj
+*.tlog
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.opendb

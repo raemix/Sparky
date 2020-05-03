@@ -25,7 +25,7 @@ namespace sparky {
 			void clear() const;
 			inline int getWidth() const { return m_Width; }
 			inline int getHeight() const { return m_Height; }
-			void windowResize(GLFWwindow* window, int width, int height);
+		//	void windowResize(GLFWwindow* window, int width, int height);
 
 
 		private:

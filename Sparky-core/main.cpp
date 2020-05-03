@@ -14,10 +14,12 @@ int main()
 	{
 		std::cout << window.getWidth() << "x" << window.getHeight() << std::endl;
 		window.clear();
-		glBegin(GL_TRIANGLES);
+		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(0.5f, -0.5f);
+		glVertex2f(0.5f, 0.5f);
 		glVertex2f(-0.5f, 0.5f);
+
 		glEnd();
 		window.update();
 	}

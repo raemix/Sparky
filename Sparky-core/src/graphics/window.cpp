@@ -3,6 +3,9 @@
 namespace sparky {
 	namespace graphics
 	{
+
+		void windowResize(GLFWwindow* window, int width, int height);
+
 		Window::Window(const char* title, int width, int height)
 		{
 			m_Title = title;
@@ -22,10 +25,7 @@ namespace sparky {
 
 		}
 
-		void windowResize(GLFWwindow* window, int width, int height) {
-			glViewport(0, 0, width, height);
-
-		}
+		
 
 		bool Window::init()
 		{
@@ -46,6 +46,10 @@ namespace sparky {
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowSizeCallback(m_Window, windowResize);
 
+			
+
+
+			std::cout << "OpenGL " << glGetString(GL_VERSION) << std::endl;
 			return true;
 		}
 
@@ -55,7 +59,6 @@ namespace sparky {
 
 		void Window::clear() const
 		{
-			glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
 
@@ -71,7 +74,10 @@ namespace sparky {
 			return glfwWindowShouldClose(m_Window) == 1;
 		}
 
+		void windowResize(GLFWwindow *window, int width, int height) {
+			glViewport(0, 0, width, height);
 
+		}
 
 	}
 }

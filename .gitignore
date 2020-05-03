@@ -1,17 +1,15 @@
-# Binaries
-**/bin/
-
-
-# Misc files
+*.ilk
+*.pdb
 *.log
-*.obj
+*.idb
 *.tlog
+*.tlog/
+*.lastbuildstate
 
-# Visual Studio files and folder
 .vs/
-**.sln
-**.vcxproj
-**.vcxproj.filters
-**.vcxproj.user
-**.opendb
-Debug/
+*.sdf
+*.user
+*.suo
+
+Intermediates/
+ipch/

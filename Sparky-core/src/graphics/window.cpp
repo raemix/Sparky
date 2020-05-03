@@ -25,8 +25,6 @@ namespace sparky {
 
 		}
 
-		
-
 		bool Window::init()
 		{
 			if (!glfwInit())
@@ -46,15 +44,15 @@ namespace sparky {
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowSizeCallback(m_Window, windowResize);
 
-			
+			//glewInit() must come after glfwMakeContextCurrent()
+			if (glewInit() != GLEW_OK)
+			{
+				std::cout << "Could not initialize GLEW!" << std::endl;
+			}
 
 
-			std::cout << "OpenGL " << glGetString(GL_VERSION) << std::endl;
 			return true;
 		}
-
-		
-
 
 
 		void Window::clear() const
